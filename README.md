@@ -13,7 +13,7 @@
 
 ## About Me
 
-I'm a Game Design & Development student at RIT (GPA 3.6, Presidential Scholarship, Dean's List) who works comfortably across both game development and general software engineering. My projects range from engine-based games in Unity, Godot, and MonoGame to full-stack web apps built with Node.js and Angular. I enjoy building things end-to-end — from UI systems and gameplay mechanics to backend APIs and AI-powered tooling.
+I'm a Game Design & Development student at RIT (GPA 3.6, Presidential Scholarship, Dean's List) who works comfortably across both game development and general software engineering. My projects range from engine-based games in Unity, Godot, and MonoGame to full-stack web apps built with Node.js and Angular. I enjoy building things end-to-end, from UI systems and gameplay mechanics to backend APIs and AI-powered tooling.
 
 I'm currently seeking a **Summer 2027 co-op or internship** where I can contribute to production software and keep growing as an engineer.
 
@@ -23,7 +23,7 @@ I'm currently seeking a **Summer 2027 co-op or internship** where I can contribu
 
 ### 🎮 Games & Interactive Media
 
-**[Fortunes Tower](https://github.com/Jland2306/Fortunes-Tower)** · Unity · *Jan 2025 – Present*
+**[Fortunes Tower](https://github.com/dfs5974/Winter2026)** · Unity · *Jan 2025 – Present*
 Third-person RPG built with a three-person team, featuring exploration, quests, and player progression. I designed and implemented core UI systems — menus, inventory management, and quest tracking — as modular, scalable components.
 
 **[Tall Boy and the Lurking Legend](https://github.com/Jland2306/Tall-Boy-and-The-Lurking-Legend)** · Unity · *Oct 2025*
@@ -32,7 +32,7 @@ Horror survival game shipped for **Scream Jam 2025** under a strict 3-day deadli
 **[Stellar Rampage](https://github.com/Jland2306/Stellar-Rampage)** · MonoGame · *Feb 2025 – May 2025*
 Space-themed shoot 'em up with custom mechanics, upgrades, and interactive menus. Collaborated with a team of 4 on the game's UI/UX; presented to a group of 20 for playtesting and iteration.
 
-**[Drive Until Impact](https://github.com/Jland2306/Drive-Until-Impact)** · Godot · *Sept 2025*
+**[Drive Until Impact](https://github.com/AwesomeAnthonyJr/DriveUntilImpact)** · Godot · *Sept 2025*
 Game jam entry for Untitled Game Jam #116 with original sprites and a cohesive HUD. **Top-10 finish (9th place overall)** out of the field.
 
 **[JDM Garage](https://github.com/Jland2306/JDM-Garage)** · Maya · Substance Painter · Unity · *Dec 2025*
