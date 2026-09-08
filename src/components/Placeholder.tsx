@@ -39,7 +39,7 @@ export default function Placeholder({ src, width, height, alt, className = '', l
     >
       <div aria-hidden="true" className="relative z-10 px-3 text-center">
         <p className="font-display text-[0.7rem] uppercase tracking-wide text-paper sm:text-sm">{filename}</p>
-        <p className="mt-1 font-body text-[0.65rem] text-slate sm:text-xs">
+        <p className="mt-1 font-body text-[0.65rem] text-slate-text sm:text-xs">
           {width}×{height}
         </p>
       </div>

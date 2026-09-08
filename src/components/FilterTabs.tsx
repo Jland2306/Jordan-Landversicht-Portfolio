@@ -21,7 +21,7 @@ export default function FilterTabs<T extends string>({ options, active, onChange
             className={[
               'nav-tab border-2 px-4 py-2 font-display text-xs uppercase tracking-wide transition-colors duration-150 sm:text-sm',
               isActive
-                ? 'nav-tab-active border-red bg-red text-jet'
+                ? 'nav-tab-active border-red bg-red text-paper'
                 : 'border-paper bg-jet text-paper hover:border-red-hot hover:text-red-hot',
             ].join(' ')}
           >

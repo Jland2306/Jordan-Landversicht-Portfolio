@@ -37,10 +37,10 @@ export default function About() {
           </div>
 
           <section className="mt-10 border-l-4 border-red pl-5">
-            <h2 className="font-display text-lg uppercase tracking-wide text-red">Education</h2>
+            <h2 className="font-display text-lg uppercase tracking-wide text-red-hot">Education</h2>
             <p className="case-normal mt-2 font-display text-xl uppercase text-paper">{profile.education.school}</p>
             <p className="case-normal font-body text-base text-paper">{profile.education.degree}</p>
-            <p className="case-normal font-body text-sm text-slate">
+            <p className="case-normal font-body text-sm text-slate-text">
               {profile.education.expected} · {profile.education.gpa}
             </p>
             <ul className="mt-2 space-y-1">
@@ -53,7 +53,7 @@ export default function About() {
           </section>
 
           <section className="mt-10 border-l-4 border-red pl-5">
-            <h2 className="font-display text-lg uppercase tracking-wide text-red">What I'm Looking For</h2>
+            <h2 className="font-display text-lg uppercase tracking-wide text-red-hot">What I'm Looking For</h2>
             <p className="case-normal mt-2 max-w-[65ch] font-body text-base text-paper">{profile.seeking}.</p>
           </section>
         </div>

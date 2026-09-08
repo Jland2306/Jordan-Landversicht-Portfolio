@@ -28,7 +28,7 @@ export default function Projects() {
           opacity: isDetailOpen ? 0.3 : 1,
         }}
         transition={{ duration: 0.35, ease: [0.76, 0, 0.24, 1] }}
-        aria-hidden={isDetailOpen || undefined}
+        inert={isDetailOpen || undefined}
       >
         <h1 className="text-display-1 font-display text-paper">Projects</h1>
 
@@ -45,7 +45,6 @@ export default function Projects() {
               <Link
                 to={`/projects/${project.slug}`}
                 className={`skew-panel group block border-2 border-paper bg-jet ${clipVariants[i % clipVariants.length]} shadow-hard transition-colors duration-150 hover:border-red-hot`}
-                tabIndex={isDetailOpen ? -1 : 0}
               >
                 <div className="skew-content">
                   <Placeholder
@@ -63,7 +62,7 @@ export default function Projects() {
                     <h2 className="text-display-2 font-display text-paper group-hover:text-red-hot">
                       {project.title}
                     </h2>
-                    <p className="case-normal mt-1 font-body text-sm text-slate">
+                    <p className="case-normal mt-1 font-body text-sm text-slate-text">
                       {project.year} · {project.role}
                     </p>
                     <ul className="mt-3 flex flex-wrap gap-1.5">

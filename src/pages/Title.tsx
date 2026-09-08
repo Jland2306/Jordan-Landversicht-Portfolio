@@ -85,7 +85,7 @@ export default function Title() {
         >
           <Link
             to="/projects"
-            className="nav-tab shadow-hard inline-flex items-center justify-center border-2 border-red bg-red px-8 py-4 font-display text-base uppercase tracking-wide text-jet transition-colors duration-150 hover:border-red-hot hover:bg-red-hot"
+            className="nav-tab shadow-hard inline-flex items-center justify-center border-2 border-red bg-red px-8 py-4 font-display text-base uppercase tracking-wide text-paper transition-colors duration-150 hover:border-red-hot hover:bg-red-hot hover:text-jet"
           >
             <span className="nav-tab-content">Enter Projects</span>
           </Link>
@@ -98,17 +98,17 @@ export default function Title() {
           transition={{ duration: 0.5, delay: 1.4 }}
         >
           <li>
-            <a href={profile.githubUrl} className="case-normal font-body text-sm text-slate underline decoration-slate underline-offset-4 hover:text-red-hot hover:decoration-red-hot">
+            <a href={profile.githubUrl} className="case-normal font-body text-sm text-slate-text underline decoration-slate underline-offset-4 hover:text-red-hot hover:decoration-red-hot">
               GitHub ↗
             </a>
           </li>
           <li>
-            <a href={profile.linkedinUrl} className="case-normal font-body text-sm text-slate underline decoration-slate underline-offset-4 hover:text-red-hot hover:decoration-red-hot">
+            <a href={profile.linkedinUrl} className="case-normal font-body text-sm text-slate-text underline decoration-slate underline-offset-4 hover:text-red-hot hover:decoration-red-hot">
               LinkedIn ↗
             </a>
           </li>
           <li>
-            <a href={profile.resumePath} className="case-normal font-body text-sm text-slate underline decoration-slate underline-offset-4 hover:text-red-hot hover:decoration-red-hot">
+            <a href={profile.resumePath} className="case-normal font-body text-sm text-slate-text underline decoration-slate underline-offset-4 hover:text-red-hot hover:decoration-red-hot">
               Résumé ↓
             </a>
           </li>

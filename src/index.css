@@ -15,6 +15,9 @@
   --color-red-hot: #ff1e2d;
   --color-paper: #f5f2e8;
   --color-slate: #6b6b6b;
+  /* Lightened slate for real body text (dates, roles, metadata) — #6B6B6B only
+     passes 3:1 (fine for rules/borders) but fails 4.5:1 required for text. */
+  --color-slate-text: #8f8f8f;
 
   /* ---- type ---- */
   --font-display: "Anton", "Arial Narrow", sans-serif;
@@ -51,54 +54,61 @@
   }
 }
 
-* {
-  box-sizing: border-box;
-}
+/* Wrapped in Tailwind's base layer (not left unlayered) so utility classes
+   — e.g. a link's text-red-hot or hover:text-* — win over these resets the
+   way normal Tailwind precedence expects. Unlayered CSS beats ALL layered
+   CSS regardless of specificity, so leaving these bare silently broke every
+   color utility applied directly to an <a> (color: inherit always won). */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background: var(--color-jet);
-  color: var(--color-paper);
-  overflow-x: hidden;
-}
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--color-jet);
+    color: var(--color-paper);
+    overflow-x: hidden;
+  }
 
-body {
-  font-family: var(--font-body);
-  font-size: var(--text-body);
-  line-height: 1.5;
-}
+  body {
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    line-height: 1.5;
+  }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: var(--font-display);
-  text-transform: uppercase;
-  line-height: 0.9;
-  letter-spacing: -0.01em;
-  margin: 0;
-}
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    line-height: 0.9;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
 
-p {
-  max-width: 70ch;
-}
+  p {
+    max-width: 70ch;
+  }
 
-a {
-  color: inherit;
-}
+  a {
+    color: inherit;
+  }
 
-img,
-svg {
-  display: block;
-  max-width: 100%;
-}
+  img,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
 
-/* ---- focus ring: hard red offset outline, on-theme, never removed ---- */
-:focus-visible {
-  outline: 3px solid var(--color-red-hot);
-  outline-offset: 3px;
+  /* focus ring: hard red offset outline, on-theme, never removed */
+  :focus-visible {
+    outline: 3px solid var(--color-red-hot);
+    outline-offset: 3px;
+  }
 }
 
 /* ---- skew primitives ---- */
@@ -226,18 +236,10 @@ svg {
   text-transform: none;
 }
 
-/* ---- utility: visually hidden but accessible ---- */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
+/* .sr-only / not-sr-only: use Tailwind's built-in utilities, not a custom
+   rule — a custom unlayered .sr-only here would shadow the layered
+   `focus:not-sr-only` utility the same way the `a{color:inherit}` bug did,
+   permanently hiding the skip-link even when focused. */
 
 @keyframes marquee {
   from {

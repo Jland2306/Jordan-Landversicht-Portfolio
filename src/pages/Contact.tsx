@@ -22,11 +22,11 @@ export default function Contact() {
           <p style={{ fontFamily: 'var(--font-marker)' }} className="mt-3 text-3xl text-paper sm:text-4xl">
             Jordan Landversicht
           </p>
-          <p className="case-normal mt-1 font-body text-sm text-slate">{profile.tagline} · RIT</p>
+          <p className="case-normal mt-1 font-body text-sm text-slate-text">{profile.tagline} · RIT</p>
 
           <dl className="mt-8 space-y-5">
             <div>
-              <dt className="font-display text-xs uppercase tracking-wide text-red">Email</dt>
+              <dt className="font-display text-xs uppercase tracking-wide text-red-hot">Email</dt>
               <dd className="case-normal mt-1">
                 <a
                   href={`mailto:${profile.email}`}
@@ -37,7 +37,7 @@ export default function Contact() {
               </dd>
             </div>
             <div>
-              <dt className="font-display text-xs uppercase tracking-wide text-red">LinkedIn</dt>
+              <dt className="font-display text-xs uppercase tracking-wide text-red-hot">LinkedIn</dt>
               <dd className="case-normal mt-1">
                 <a
                   href={profile.linkedinUrl}
@@ -48,7 +48,7 @@ export default function Contact() {
               </dd>
             </div>
             <div>
-              <dt className="font-display text-xs uppercase tracking-wide text-red">GitHub</dt>
+              <dt className="font-display text-xs uppercase tracking-wide text-red-hot">GitHub</dt>
               <dd className="case-normal mt-1">
                 <a
                   href={profile.githubUrl}
@@ -63,7 +63,7 @@ export default function Contact() {
           <a
             href={profile.resumePath}
             download
-            className="nav-tab shadow-hard-hot mt-10 inline-flex items-center justify-center gap-2 border-2 border-red bg-red px-6 py-3 font-display text-sm uppercase tracking-wide text-jet transition-colors duration-150 hover:border-red-hot hover:bg-red-hot"
+            className="nav-tab shadow-hard-hot mt-10 inline-flex items-center justify-center gap-2 border-2 border-red bg-red px-6 py-3 font-display text-sm uppercase tracking-wide text-paper transition-colors duration-150 hover:border-red-hot hover:bg-red-hot hover:text-jet"
           >
             <span className="nav-tab-content">Download Résumé ↓</span>
           </a>

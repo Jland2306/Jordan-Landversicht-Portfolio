@@ -13,7 +13,7 @@ export default function StatMeter({ name, depth }: Skill) {
     <div className="py-2.5">
       <div className="flex items-baseline justify-between gap-4">
         <span className="font-display text-sm uppercase tracking-wide text-paper sm:text-base">{name}</span>
-        <span className="case-normal shrink-0 font-body text-xs text-slate sm:text-sm">{depthLabel[depth]}</span>
+        <span className="case-normal shrink-0 font-body text-xs text-slate-text sm:text-sm">{depthLabel[depth]}</span>
       </div>
       <div
         role="img"

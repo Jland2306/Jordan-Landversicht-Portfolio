@@ -13,7 +13,7 @@ import NotFound from './pages/NotFound'
 function App() {
   return (
     <>
-      <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-[200] focus:bg-red focus:px-4 focus:py-2 focus:font-display focus:uppercase focus:text-jet">
+      <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-[200] focus:bg-red focus:px-4 focus:py-2 focus:font-display focus:uppercase focus:text-paper">
         Skip to content
       </a>
       <Nav />

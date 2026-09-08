@@ -41,7 +41,7 @@ export default function Nav() {
                   'nav-tab h-12 w-full items-center justify-center border-2 text-center font-display text-[0.6rem] uppercase tracking-wide md:h-11 md:text-xs',
                   'transition-colors duration-150',
                   isActive
-                    ? 'nav-tab-active border-red bg-red text-jet'
+                    ? 'nav-tab-active border-red bg-red text-paper'
                     : 'border-paper bg-jet text-paper hover:border-red-hot hover:text-red-hot',
                 ].join(' ')
               }

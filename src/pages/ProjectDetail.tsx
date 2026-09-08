@@ -37,7 +37,7 @@ export default function ProjectDetail() {
         <p className="mt-8 font-display text-sm uppercase tracking-wide text-red-hot">{project.highlight}</p>
       )}
       <h2 className="text-display-1 mt-2 font-display text-paper">{project.title}</h2>
-      <p className="case-normal mt-2 font-body text-base text-slate">
+      <p className="case-normal mt-2 font-body text-base text-slate-text">
         {project.dates} · {project.team} · {project.role}
       </p>
 
@@ -52,20 +52,20 @@ export default function ProjectDetail() {
 
       <div className="mt-10 space-y-8">
         <section>
-          <h3 className="font-display text-lg uppercase tracking-wide text-red">The Problem</h3>
+          <h3 className="font-display text-lg uppercase tracking-wide text-red-hot">The Problem</h3>
           <p className="case-normal mt-2 font-body text-base text-paper">{project.problem}</p>
         </section>
         <section>
-          <h3 className="font-display text-lg uppercase tracking-wide text-red">What I Built</h3>
+          <h3 className="font-display text-lg uppercase tracking-wide text-red-hot">What I Built</h3>
           <p className="case-normal mt-2 font-body text-base text-paper">{project.built}</p>
         </section>
         <section>
-          <h3 className="font-display text-lg uppercase tracking-wide text-red">My Contribution</h3>
+          <h3 className="font-display text-lg uppercase tracking-wide text-red-hot">My Contribution</h3>
           <p className="case-normal mt-2 font-body text-base text-paper">{project.contribution}</p>
         </section>
 
         <section>
-          <h3 className="font-display text-lg uppercase tracking-wide text-red">Stack</h3>
+          <h3 className="font-display text-lg uppercase tracking-wide text-red-hot">Stack</h3>
           <ul className="mt-3 flex flex-wrap gap-2">
             {project.stack.map((s) => (
               <li key={s} className="border border-slate px-2.5 py-1 font-display text-xs uppercase tracking-wide text-paper">
@@ -76,7 +76,7 @@ export default function ProjectDetail() {
         </section>
 
         <section>
-          <h3 className="font-display text-lg uppercase tracking-wide text-red">Gallery</h3>
+          <h3 className="font-display text-lg uppercase tracking-wide text-red-hot">Gallery</h3>
           <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2">
             {gallery.map((src, i) => (
               <Placeholder
@@ -93,7 +93,7 @@ export default function ProjectDetail() {
         {project.repoUrl && (
           <a
             href={project.repoUrl}
-            className="nav-tab shadow-hard inline-flex items-center justify-center border-2 border-red bg-red px-6 py-3 font-display text-sm uppercase tracking-wide text-jet transition-colors duration-150 hover:border-red-hot hover:bg-red-hot"
+            className="nav-tab shadow-hard inline-flex items-center justify-center border-2 border-red bg-red px-6 py-3 font-display text-sm uppercase tracking-wide text-paper transition-colors duration-150 hover:border-red-hot hover:bg-red-hot hover:text-jet"
           >
             <span className="nav-tab-content">View on GitHub ↗</span>
           </a>

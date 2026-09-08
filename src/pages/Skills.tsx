@@ -13,7 +13,7 @@ export default function Skills() {
       />
 
       <h1 className="text-display-1 font-display text-paper">Status</h1>
-      <p className="case-normal mt-2 max-w-2xl font-body text-slate">
+      <p className="case-normal mt-2 max-w-2xl font-body text-slate-text">
         Depth is labeled honestly — shipped-project experience versus coursework or self-taught. No invented percentages.
       </p>
 
@@ -26,7 +26,7 @@ export default function Skills() {
             }`}
           >
             <div className="skew-content">
-              <h2 className="font-display text-xl uppercase tracking-wide text-red">{group.title}</h2>
+              <h2 className="font-display text-xl uppercase tracking-wide text-red-hot">{group.title}</h2>
               <div className="mt-2 divide-y divide-slate/20">
                 {group.skills.map((skill) => (
                   <StatMeter key={skill.name} {...skill} />
@@ -40,11 +40,11 @@ export default function Skills() {
       <div className="mt-12 grid grid-cols-1 gap-x-10 gap-y-12 lg:grid-cols-2">
         <section className="skew-panel clip-torn-3 border-2 border-paper bg-jet px-10 py-7 shadow-hard sm:px-12 sm:py-8">
           <div className="skew-content">
-            <h2 className="font-display text-xl uppercase tracking-wide text-red">Practices</h2>
+            <h2 className="font-display text-xl uppercase tracking-wide text-red-hot">Practices</h2>
             <ul className="mt-4 space-y-2">
               {practices.map((practice) => (
                 <li key={practice} className="case-normal flex items-start gap-2 font-body text-paper">
-                  <span aria-hidden="true" className="mt-1 text-red">▸</span>
+                  <span aria-hidden="true" className="mt-1 text-red-hot">▸</span>
                   {practice}
                 </li>
               ))}
@@ -54,7 +54,7 @@ export default function Skills() {
 
         <section className="skew-panel clip-torn-1 border-2 border-paper bg-jet px-10 py-7 shadow-hard sm:px-12 sm:py-8">
           <div className="skew-content">
-            <h2 className="font-display text-xl uppercase tracking-wide text-red">Platforms</h2>
+            <h2 className="font-display text-xl uppercase tracking-wide text-red-hot">Platforms</h2>
             <ul className="mt-4 flex flex-wrap gap-2">
               {platforms.map((platform) => (
                 <li

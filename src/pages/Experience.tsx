@@ -22,7 +22,7 @@ export default function Experience() {
             />
             <p className="font-display text-sm uppercase tracking-wide text-red-hot">{entry.dates}</p>
             <h2 className="text-display-2 mt-1 font-display text-paper">{entry.role}</h2>
-            <p className="case-normal font-body text-base text-slate">
+            <p className="case-normal font-body text-base text-slate-text">
               {entry.org}
               {entry.location ? ` · ${entry.location}` : ''}
             </p>
