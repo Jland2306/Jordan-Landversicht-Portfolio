@@ -2,6 +2,37 @@
 
 /* Self-hosted fonts — no CDN requests */
 @import "@fontsource/anton/400.css";
+
+/* Anton is a very condensed display face — swapping it in after a fallback
+   causes a large layout shift on headings that appear on every page (this
+   was ~99% of measured CLS). font-display: optional means the browser only
+   uses the webfont if it's already cached/near-instant; otherwise it keeps
+   the fallback for the rest of the page's life instead of swapping later.
+   Same family/weight/unicode-range as the import above, so this simply
+   wins as the later-declared, more specific font-display for that match. */
+@font-face {
+  font-family: "Anton";
+  font-style: normal;
+  font-display: optional;
+  font-weight: 400;
+  src:
+    url("../node_modules/@fontsource/anton/files/anton-latin-400-normal.woff2") format("woff2"),
+    url("../node_modules/@fontsource/anton/files/anton-latin-400-normal.woff") format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Anton";
+  font-style: normal;
+  font-display: optional;
+  font-weight: 400;
+  src:
+    url("../node_modules/@fontsource/anton/files/anton-latin-ext-400-normal.woff2") format("woff2"),
+    url("../node_modules/@fontsource/anton/files/anton-latin-ext-400-normal.woff") format("woff");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
 @import "@fontsource/barlow/400.css";
 @import "@fontsource/barlow/500.css";
 @import "@fontsource/barlow/600.css";
@@ -20,7 +51,7 @@
   --color-slate-text: #8f8f8f;
 
   /* ---- type ---- */
-  --font-display: "Anton", "Arial Narrow", sans-serif;
+  --font-display: "Anton", Impact, "Arial Narrow", sans-serif;
   --font-body: "Barlow", "Helvetica Neue", Arial, sans-serif;
   --font-marker: "Permanent Marker", cursive;
 

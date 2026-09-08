@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "build:gh-pages": "cross-env DEPLOY_TARGET=gh-pages tsc -b && cross-env DEPLOY_TARGET=gh-pages vite build",
-    "deploy:gh-pages": "npm run build:gh-pages && gh-pages -d dist",
+    "prerender": "node scripts/prerender.mjs",
+    "prerender:gh-pages": "cross-env DEPLOY_TARGET=gh-pages node scripts/prerender.mjs",
+    "deploy:gh-pages": "npm run build:gh-pages && npm run prerender:gh-pages && gh-pages -d dist",
     "lint": "oxlint",
     "preview": "vite preview"
   },
@@ -30,6 +32,7 @@
     "cross-env": "^10.1.0",
     "gh-pages": "^6.3.0",
     "oxlint": "^1.79.0",
+    "playwright": "^1.63.0",
     "typescript": "~6.0.2",
     "vite": "^8.2.2"
   }
