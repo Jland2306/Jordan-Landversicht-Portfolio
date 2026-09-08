@@ -1,9 +1,11 @@
 import Seo from '../components/Seo'
+import DiagonalBand from '../components/DiagonalBand'
 import { experience } from '../data/experience'
 
 export default function Experience() {
   return (
-    <div className="min-h-screen px-6 py-16 sm:px-10 md:px-14">
+    <div className="relative isolate min-h-screen px-6 py-16 sm:px-10 md:px-14">
+      <DiagonalBand position="left-1/4" color="red-hot" />
       <Seo
         title="Experience"
         description="Jordan Landversicht's work experience — Hack Your Summer, Mavis Discount Tire, and Thunderhart Golf Course."

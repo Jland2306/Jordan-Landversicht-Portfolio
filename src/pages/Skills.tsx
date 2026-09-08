@@ -1,10 +1,12 @@
 import Seo from '../components/Seo'
 import StatMeter from '../components/StatMeter'
+import DiagonalBand from '../components/DiagonalBand'
 import { skillGroups, practices, platforms } from '../data/skills'
 
 export default function Skills() {
   return (
-    <div className="min-h-screen px-6 py-16 sm:px-10 md:px-14">
+    <div className="relative isolate min-h-screen px-6 py-16 sm:px-10 md:px-14">
+      <DiagonalBand position="left-1/2" />
       <Seo
         title="Skills"
         description="Jordan Landversicht's skills: languages, engines, tools, and practices, honestly labeled by depth of use."

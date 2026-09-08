@@ -1,9 +1,11 @@
 import Seo from '../components/Seo'
+import DiagonalBand from '../components/DiagonalBand'
 import { profile } from '../data/profile'
 
 export default function Contact() {
   return (
-    <div className="flex min-h-screen items-center justify-center px-6 py-20 sm:px-10 md:px-14">
+    <div className="relative isolate flex min-h-screen items-center justify-center px-6 py-20 sm:px-10 md:px-14">
+      <DiagonalBand position="left-1/4" />
       <Seo
         title="Contact"
         description="Get in touch with Jordan Landversicht — email, LinkedIn, GitHub, and résumé."

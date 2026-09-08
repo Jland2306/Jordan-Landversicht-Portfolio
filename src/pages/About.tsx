@@ -1,10 +1,12 @@
 import Seo from '../components/Seo'
 import Placeholder from '../components/Placeholder'
+import DiagonalBand from '../components/DiagonalBand'
 import { profile } from '../data/profile'
 
 export default function About() {
   return (
-    <div className="min-h-screen px-6 py-16 sm:px-10 md:px-14">
+    <div className="relative isolate min-h-screen px-6 py-16 sm:px-10 md:px-14">
+      <DiagonalBand position="left-2/3" />
       <Seo
         title="About"
         description="About Jordan Landversicht — Game Design & Development student at RIT, what I'm building, and what I'm looking for."
