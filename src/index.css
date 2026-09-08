@@ -61,6 +61,7 @@ body {
   padding: 0;
   background: var(--color-jet);
   color: var(--color-paper);
+  overflow-x: hidden;
 }
 
 body {
@@ -115,6 +116,32 @@ svg {
 
 .skew-tab-content {
   transform: skewY(calc(var(--skew) * -1));
+}
+
+/* ---- nav tabs: horizontal parallelogram on mobile, vertical on desktop ---- */
+.nav-tab {
+  display: inline-flex;
+  transform: skewX(var(--skew));
+}
+
+.nav-tab-content {
+  display: inline-block;
+  transform: skewX(calc(var(--skew) * -1));
+}
+
+@media (min-width: 768px) {
+  .nav-tab {
+    transform: skewY(var(--skew));
+  }
+
+  .nav-tab-content {
+    transform: skewY(calc(var(--skew) * -1));
+  }
+}
+
+.nav-tab-active,
+.nav-tab-active .nav-tab-content {
+  transform: none;
 }
 
 /* ---- hard offset shadow, zero blur ---- */
