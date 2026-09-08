@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+/* Self-hosted fonts — no CDN requests */
+@import "@fontsource/anton/400.css";
+@import "@fontsource/barlow/400.css";
+@import "@fontsource/barlow/500.css";
+@import "@fontsource/barlow/600.css";
+@import "@fontsource/barlow/700.css";
+@import "@fontsource/permanent-marker/400.css";
+
+@theme {
+  /* ---- color tokens ---- */
+  --color-jet: #000000;
+  --color-red: #d6001c;
+  --color-red-hot: #ff1e2d;
+  --color-paper: #f5f2e8;
+  --color-slate: #6b6b6b;
+
+  /* ---- type ---- */
+  --font-display: "Anton", "Arial Narrow", sans-serif;
+  --font-body: "Barlow", "Helvetica Neue", Arial, sans-serif;
+  --font-marker: "Permanent Marker", cursive;
+
+  /* ---- fluid type scale ---- */
+  --text-hero: clamp(3.5rem, 16vw, 11rem);
+  --text-display-1: clamp(2.5rem, 9vw, 6rem);
+  --text-display-2: clamp(1.5rem, 4vw, 2.5rem);
+  --text-label: 0.75rem;
+  --text-body: clamp(1rem, 1.1vw, 1.0625rem);
+  --text-small: 0.8125rem;
+
+  --animate-marquee: marquee 18s linear infinite;
+}
+
+:root {
+  --skew: -6deg;
+  --shadow-offset: 8px;
+  color-scheme: dark;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --skew: -3deg;
+    --shadow-offset: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --skew: -4deg;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-jet);
+  color: var(--color-paper);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+p {
+  max-width: 70ch;
+}
+
+a {
+  color: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ---- focus ring: hard red offset outline, on-theme, never removed ---- */
+:focus-visible {
+  outline: 3px solid var(--color-red-hot);
+  outline-offset: 3px;
+}
+
+/* ---- skew primitives ---- */
+.skew-panel {
+  transform: skewX(var(--skew));
+}
+
+.skew-content {
+  transform: skewX(calc(var(--skew) * -1));
+}
+
+.skew-tab {
+  transform: skewY(var(--skew));
+}
+
+.skew-tab-content {
+  transform: skewY(calc(var(--skew) * -1));
+}
+
+/* ---- hard offset shadow, zero blur ---- */
+.shadow-hard {
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 0 var(--color-red);
+}
+
+.shadow-hard-hot {
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 0 var(--color-red-hot);
+}
+
+.shadow-hard-paper {
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 0 var(--color-paper);
+}
+
+/* ---- halftone texture, tiling SVG background ---- */
+.halftone {
+  position: relative;
+}
+
+.halftone::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Ccircle cx='2' cy='2' r='1.5' fill='%23F5F2E8'/%3E%3C/svg%3E");
+  background-size: 16px 16px;
+  opacity: 0.08;
+}
+
+.halftone-red::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Ccircle cx='2' cy='2' r='1.5' fill='%23D6001C'/%3E%3C/svg%3E");
+  opacity: 0.35;
+}
+
+/* ---- torn-paper clip-path variants; vary per panel so nothing looks stamped ---- */
+.clip-torn-1 {
+  clip-path: polygon(
+    0 2%,
+    3% 0,
+    97% 1%,
+    100% 4%,
+    99% 96%,
+    96% 100%,
+    4% 99%,
+    0 97%
+  );
+}
+
+.clip-torn-2 {
+  clip-path: polygon(
+    1% 0,
+    100% 0,
+    99% 3%,
+    100% 95%,
+    97% 100%,
+    2% 100%,
+    0 98%,
+    2% 5%
+  );
+}
+
+.clip-torn-3 {
+  clip-path: polygon(
+    2% 1%,
+    98% 0,
+    100% 3%,
+    98% 97%,
+    100% 100%,
+    3% 99%,
+    0 96%,
+    1% 4%
+  );
+}
+
+.clip-shard {
+  clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+}
+
+/* ---- sentence-case override for body copy inside otherwise-uppercase contexts ---- */
+.case-normal {
+  text-transform: none;
+}
+
+/* ---- utility: visually hidden but accessible ---- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
