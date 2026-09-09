@@ -15,12 +15,14 @@ export default function Skills() {
       <h1 className="text-display-1 font-display text-paper">STATUS & SKILLS</h1>
 
       <div className="mt-10 grid grid-cols-1 gap-x-10 gap-y-12 lg:grid-cols-2">
-        {skillGroups.map((group, i) => (
+        {skillGroups.map((group, i) => {
+          const isLastOdd = skillGroups.length % 2 === 1 && i === skillGroups.length - 1
+          return (
           <section
             key={group.title}
             className={`skew-panel border-2 border-paper bg-jet px-10 py-7 shadow-hard sm:px-12 sm:py-8 ${
               i % 2 === 1 ? 'clip-torn-2' : 'clip-torn-1'
-            }`}
+            } ${isLastOdd ? 'lg:col-span-2 lg:mx-auto lg:w-[calc(50%-1.25rem)]' : ''}`}
           >
             <div className="skew-content">
               <h2 className="font-display text-xl uppercase tracking-wide text-red-hot">{group.title}</h2>
@@ -31,7 +33,8 @@ export default function Skills() {
               </div>
             </div>
           </section>
-        ))}
+          )
+        })}
       </div>
 
       <div className="mt-12 grid grid-cols-1 gap-x-10 gap-y-12 lg:grid-cols-2">
