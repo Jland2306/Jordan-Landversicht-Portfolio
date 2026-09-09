@@ -38,7 +38,8 @@ export default function Nav() {
               end={route.path === '/'}
               className={({ isActive }) =>
                 [
-                  'nav-tab h-12 w-full items-center justify-center border-2 text-center font-display text-[0.6rem] uppercase tracking-wide md:h-full md:text-base lg:text-lg',
+                  'nav-tab h-12 w-full items-center justify-center border-2 text-center font-display font-bold uppercase tracking-wide',
+                  'text-[0.6rem] md:h-full md:text-2xl lg:text-3xl xl:text-4xl',
                   'transition-colors duration-150',
                   isActive
                     ? 'nav-tab-active border-red bg-red text-paper'
@@ -46,9 +47,12 @@ export default function Nav() {
                 ].join(' ')
               }
             >
-              <span className="nav-tab-content flex h-full w-full items-center justify-center">
-                {route.label}
-              </span>
+              {/* No counter-skew here (unlike the shared .nav-tab-content buttons
+                  elsewhere): the label should inherit the tab's own skew when
+                  inactive and only go upright when the active tab's own skew
+                  is removed, per the request that inactive labels visibly
+                  lean with the tab and snap straight only when selected. */}
+              <span className="flex h-full w-full items-center justify-center">{route.label}</span>
             </NavLink>
           </li>
         ))}
