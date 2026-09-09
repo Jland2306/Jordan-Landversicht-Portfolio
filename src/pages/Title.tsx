@@ -63,13 +63,13 @@ export default function Title() {
         <h1 className="text-hero font-display leading-[0.85] text-paper">
           <AssembledWord word={profile.firstName} delayStart={0.1} />
           <br />
-          <span className="text-red">
+          <span className="text-red-hot">
             <AssembledWord word={profile.lastName} delayStart={0.1 + profile.firstName.length * 0.035 + 0.15} />
           </span>
         </h1>
 
         <motion.p
-          className="case-normal mt-8 max-w-xl text-base text-paper sm:text-lg"
+          className="case-normal mt-8 max-w-4xl text-xl text-paper sm:text-2xl lg:text-3xl"
           initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.1 }}
@@ -85,30 +85,30 @@ export default function Title() {
         >
           <Link
             to="/projects"
-            className="nav-tab shadow-hard inline-flex items-center justify-center border-2 border-red bg-red px-8 py-4 font-display text-base uppercase tracking-wide text-paper transition-colors duration-150 hover:border-red-hot hover:bg-red-hot hover:text-jet"
+            className="nav-tab shadow-hard inline-flex items-center justify-center border-2 border-red bg-red px-10 py-5 font-display text-lg uppercase tracking-wide text-paper transition-colors duration-150 hover:border-red-hot hover:bg-red-hot hover:text-jet sm:px-14 sm:py-6 sm:text-2xl"
           >
             <span className="nav-tab-content">Enter Projects</span>
           </Link>
         </motion.div>
 
         <motion.ul
-          className="mt-16 flex flex-wrap gap-x-8 gap-y-2"
+          className="mt-16 flex flex-wrap gap-x-10 gap-y-3"
           initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 1.4 }}
         >
           <li>
-            <a href={profile.githubUrl} className="case-normal font-body text-sm text-slate-text underline decoration-slate underline-offset-4 hover:text-red-hot hover:decoration-red-hot">
+            <a href={profile.githubUrl} className="case-normal font-body text-base text-slate-text underline decoration-slate underline-offset-4 hover:text-red-hot hover:decoration-red-hot sm:text-lg">
               GitHub ↗
             </a>
           </li>
           <li>
-            <a href={profile.linkedinUrl} className="case-normal font-body text-sm text-slate-text underline decoration-slate underline-offset-4 hover:text-red-hot hover:decoration-red-hot">
+            <a href={profile.linkedinUrl} className="case-normal font-body text-base text-slate-text underline decoration-slate underline-offset-4 hover:text-red-hot hover:decoration-red-hot sm:text-lg">
               LinkedIn ↗
             </a>
           </li>
           <li>
-            <a href={profile.resumePath} className="case-normal font-body text-sm text-slate-text underline decoration-slate underline-offset-4 hover:text-red-hot hover:decoration-red-hot">
+            <a href={profile.resumePath} className="case-normal font-body text-base text-slate-text underline decoration-slate underline-offset-4 hover:text-red-hot hover:decoration-red-hot sm:text-lg">
               Résumé ↓
             </a>
           </li>

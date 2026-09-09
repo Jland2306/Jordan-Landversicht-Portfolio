@@ -12,10 +12,7 @@ export default function Skills() {
         description="Jordan Landversicht's skills: languages, engines, tools, and practices, honestly labeled by depth of use."
       />
 
-      <h1 className="text-display-1 font-display text-paper">Status</h1>
-      <p className="case-normal mt-2 max-w-2xl font-body text-slate-text">
-        Depth is labeled honestly — shipped-project experience versus coursework or self-taught. No invented percentages.
-      </p>
+      <h1 className="text-display-1 font-display text-paper">STATUS & SKILLS</h1>
 
       <div className="mt-10 grid grid-cols-1 gap-x-10 gap-y-12 lg:grid-cols-2">
         {skillGroups.map((group, i) => (

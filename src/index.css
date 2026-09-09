@@ -56,7 +56,12 @@
   --font-marker: "Permanent Marker", cursive;
 
   /* ---- fluid type scale ---- */
-  --text-hero: clamp(3.5rem, 16vw, 11rem);
+  /* The nav rail eats a near-fixed chunk of width, so a pure vw-based clamp
+     overshoots at mid desktop widths (1024-1440px) where that chunk is a
+     bigger proportion of the viewport — subtracting a flat px offset keeps
+     the longer last name from overflowing there while still scaling up
+     more on wide screens than a plain vw formula would allow. */
+  --text-hero: clamp(3rem, calc(18.5vw - 70px), 13rem);
   --text-display-1: clamp(2.5rem, 9vw, 6rem);
   --text-display-2: clamp(1.5rem, 4vw, 2.5rem);
   --text-label: 0.75rem;
