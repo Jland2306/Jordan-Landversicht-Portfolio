@@ -21,15 +21,15 @@ export default function Nav() {
   return (
     <nav
       aria-label="Primary"
-      className="fixed inset-x-0 bottom-0 z-40 border-t-2 border-paper bg-jet md:inset-y-0 md:left-0 md:right-auto md:bottom-auto md:w-44 md:border-t-0 md:border-r-2 lg:w-52"
+      className="fixed inset-x-0 bottom-0 z-40 border-t-2 border-paper bg-jet md:inset-y-0 md:left-0 md:right-auto md:w-56 md:border-t-0 md:border-r-2 lg:w-64 xl:w-72"
     >
       <ul
         role="list"
         onKeyDown={handleKeyDown}
-        className="flex h-full flex-row justify-around px-1 py-1.5 md:flex-col md:justify-center md:gap-3 md:px-4 md:py-0"
+        className="flex h-full flex-row justify-around px-1 py-1.5 md:flex-col md:gap-4 md:px-5 md:py-5 lg:gap-5 lg:px-6 lg:py-6"
       >
         {navRoutes.map((route, i) => (
-          <li key={route.path} className="flex flex-1 items-center justify-center md:flex-none md:py-1">
+          <li key={route.path} className="flex flex-1 items-center justify-center">
             <NavLink
               ref={(el) => {
                 linkRefs.current[i] = el
@@ -38,7 +38,7 @@ export default function Nav() {
               end={route.path === '/'}
               className={({ isActive }) =>
                 [
-                  'nav-tab h-12 w-full items-center justify-center border-2 text-center font-display text-[0.6rem] uppercase tracking-wide md:h-11 md:text-xs',
+                  'nav-tab h-12 w-full items-center justify-center border-2 text-center font-display text-[0.6rem] uppercase tracking-wide md:h-full md:text-base lg:text-lg',
                   'transition-colors duration-150',
                   isActive
                     ? 'nav-tab-active border-red bg-red text-paper'

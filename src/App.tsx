@@ -18,7 +18,7 @@ function App() {
       </a>
       <Nav />
       <RouteWipe />
-      <main id="main" className="min-h-screen bg-jet pb-16 md:pb-0 md:pl-44 lg:pl-52">
+      <main id="main" className="min-h-screen bg-jet pb-16 md:pb-0 md:pl-56 lg:pl-64 xl:pl-72">
         <Routes>
           <Route path="/" element={<Title />} />
           <Route path="/projects" element={<Projects />}>
