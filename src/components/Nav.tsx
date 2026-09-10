@@ -1,10 +1,19 @@
 import { useRef } from 'react'
-import type { KeyboardEvent } from 'react'
+import type { KeyboardEvent, MouseEvent } from 'react'
 import { NavLink } from 'react-router-dom'
 import { navRoutes } from '../lib/routes'
+import { useWipeNavigate } from '../context/Transition'
+import { isPlainLeftClick } from '../lib/clickIntercept'
 
 export default function Nav() {
   const linkRefs = useRef<(HTMLAnchorElement | null)[]>([])
+  const go = useWipeNavigate()
+
+  function handleClick(event: MouseEvent<HTMLAnchorElement>, path: string) {
+    if (!isPlainLeftClick(event)) return // let the browser handle new-tab/new-window clicks natively
+    event.preventDefault()
+    go(path)
+  }
 
   function handleKeyDown(event: KeyboardEvent<HTMLUListElement>) {
     const advance = event.key === 'ArrowDown' || event.key === 'ArrowRight'
@@ -36,6 +45,7 @@ export default function Nav() {
               }}
               to={route.path}
               end={route.path === '/'}
+              onClick={(event) => handleClick(event, route.path)}
               className={({ isActive }) =>
                 [
                   'nav-tab h-12 w-full items-center justify-center border-2 text-center font-display font-bold uppercase tracking-wide',

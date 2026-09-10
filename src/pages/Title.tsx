@@ -1,5 +1,7 @@
 import { motion, useReducedMotion } from 'motion/react'
 import { Link } from 'react-router-dom'
+import { useWipeNavigate } from '../context/Transition'
+import { isPlainLeftClick } from '../lib/clickIntercept'
 import Seo from '../components/Seo'
 import { profile } from '../data/profile'
 
@@ -34,6 +36,7 @@ function AssembledWord({ word, delayStart }: { word: string; delayStart: number 
 
 export default function Title() {
   const prefersReducedMotion = useReducedMotion()
+  const go = useWipeNavigate()
 
   return (
     <div className="relative flex min-h-screen flex-col justify-center overflow-hidden px-6 py-24 sm:px-10 md:px-16">
@@ -85,6 +88,11 @@ export default function Title() {
         >
           <Link
             to="/projects"
+            onClick={(event) => {
+              if (!isPlainLeftClick(event)) return
+              event.preventDefault()
+              go('/projects')
+            }}
             className="nav-tab shadow-hard inline-flex items-center justify-center border-2 border-red bg-red px-10 py-5 font-display text-lg uppercase tracking-wide text-paper transition-colors duration-150 hover:border-red-hot hover:bg-red-hot hover:text-jet sm:px-14 sm:py-6 sm:text-2xl"
           >
             <span className="nav-tab-content">Enter Projects</span>
