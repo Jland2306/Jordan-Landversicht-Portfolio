@@ -155,6 +155,7 @@ export const projects: Project[] = [
   {
     slug: 'artic-dodge',
     title: 'Artic Dodge',
+    galleryCount: 2,
     dates: 'Nov 2025 – Dec 2025',
     year: '2025',
     role: 'Solo developer',
