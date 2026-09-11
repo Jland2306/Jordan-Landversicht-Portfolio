@@ -174,6 +174,7 @@ export const projects: Project[] = [
   {
     slug: 'pokemon-picker',
     title: 'Pokemon Picker',
+    galleryCount: 2,
     dates: 'Oct 2025 – Nov 2025',
     year: '2025',
     role: 'Solo developer',
