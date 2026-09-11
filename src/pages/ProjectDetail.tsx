@@ -13,7 +13,8 @@ export default function ProjectDetail() {
     return <Navigate to="/projects" replace />
   }
 
-  const gallery = [1, 2, 3, 4].map((n) => `/images/projects/${project.slug}-0${n}.png`)
+  const galleryCount = project.galleryCount ?? 4
+  const gallery = Array.from({ length: galleryCount }, (_, i) => `/images/projects/${project.slug}-0${i + 1}.png`)
 
   return (
     <motion.aside
@@ -75,20 +76,22 @@ export default function ProjectDetail() {
           </ul>
         </section>
 
-        <section>
-          <h3 className="font-display text-lg uppercase tracking-wide text-red-hot">Gallery</h3>
-          <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {gallery.map((src, i) => (
-              <Placeholder
-                key={src}
-                src={src}
-                width={1600}
-                height={900}
-                alt={`Additional screenshot ${i + 1} from ${project.title}`}
-              />
-            ))}
-          </div>
-        </section>
+        {galleryCount > 0 && (
+          <section>
+            <h3 className="font-display text-lg uppercase tracking-wide text-red-hot">Gallery</h3>
+            <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {gallery.map((src, i) => (
+                <Placeholder
+                  key={src}
+                  src={src}
+                  width={1600}
+                  height={900}
+                  alt={`Additional screenshot ${i + 1} from ${project.title}`}
+                />
+              ))}
+            </div>
+          </section>
+        )}
 
         {project.repoUrl && (
           <a

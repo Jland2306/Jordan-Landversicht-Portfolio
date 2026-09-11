@@ -22,8 +22,12 @@ black-and-red panel showing the filename and pixel dimensions instead.
 ## Projects
 
 Each project needs a 16:9 cover image plus up to four 16:9 gallery
-screenshots (the gallery always renders four slots; any that don't exist
-yet just show the placeholder).
+screenshots. The gallery renders `galleryCount` slots (defaults to 4 if
+not set on the project in `src/data/projects.ts`) — any slot without a
+real file just shows the placeholder. To show fewer slots instead of
+placeholders for screenshots you don't plan to add, set
+`galleryCount: 2` (or however many you have) on that project, or
+`galleryCount: 0` to drop the Gallery section entirely.
 
 | Slug | Cover (1280×720) | Gallery (1600×900 each) |
 |---|---|---|

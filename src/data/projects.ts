@@ -15,6 +15,11 @@ export interface Project {
   contribution: string
   highlight?: string
   repoUrl?: string
+  /** How many gallery screenshot slots to show on the detail page (each
+   * pulls from /images/projects/{slug}-01.png through -04.png). Defaults
+   * to 4 — set lower (or 0) for a project with fewer real screenshots
+   * planned, so it doesn't show empty placeholder slots. */
+  galleryCount?: number
 }
 
 export const projects: Project[] = [
