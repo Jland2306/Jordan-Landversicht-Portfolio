@@ -193,6 +193,7 @@ export const projects: Project[] = [
   {
     slug: 'penguin-platformer',
     title: 'Penguin Platformer',
+    galleryCount: 2,
     dates: 'Apr 2025',
     year: '2025',
     role: 'Solo developer & artist',
