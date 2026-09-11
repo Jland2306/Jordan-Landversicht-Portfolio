@@ -115,6 +115,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'jdm-garage',
+    galleryCount: 2,
     title: 'JDM Garage',
     dates: 'Dec 2025',
     year: '2025',
@@ -134,6 +135,7 @@ export const projects: Project[] = [
   {
     slug: 'drive-until-impact',
     title: 'Drive Until Impact',
+    galleryCount: 2,
     dates: 'Sept 2025',
     year: '2025',
     role: 'UI/HUD & Animation',
