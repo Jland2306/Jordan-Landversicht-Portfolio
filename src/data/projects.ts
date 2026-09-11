@@ -34,12 +34,12 @@ export const projects: Project[] = [
     stack: ['Unity', 'C#'],
     hook: 'A third-person RPG with exploration, quests, and progression, built with a three-person team.',
     problem:
-      "An RPG lives or dies on whether the player can read their own state at a glance — inventory, quests, progression — without the UI getting in the way of exploration.",
+      "An RPG lives or dies on whether the player can read their own state at a glance. For example their inventory, quests, progression; all without the UI getting in the way of exploration.",
     built:
-      "I design and implement the core UI systems: menus, inventory, and quest tracking, built as modular components meant to scale as the team adds new gameplay features rather than get rebuilt every time.",
+      "I design and implement the core UI systems which include the menus, inventory, player HUD, and quest tracking system that was built as modular components meant to scale as the team adds new gameplay features rather than get rebuilt every time.",
     contribution:
-      "I own the UI layer end to end — architecture, implementation, and iteration — and work in version control with the team, running playtests to catch what's confusing before it ships.",
-    // Personal project, no public repo yet — repoUrl intentionally omitted.
+      "Im the head of the UI layer end to end, which includes the architecture, implementation, and iteration. I make sure to work in version control with the team, running playtests to catch what's confusing before it ships.",
+    repoUrl: 'https://github.com/dfs5974/Winter2026',
   },
   {
     slug: 'vinsight',
@@ -52,9 +52,9 @@ export const projects: Project[] = [
     stack: ['Node.js', 'Express', 'JavaScript', 'Cheerio', 'Claude API'],
     hook: "A full-stack app that reads a used-car listing and hands the buyer back a risk report.",
     problem:
-      'Used-car listings bury the details that actually matter to a buyer inside inconsistent, unstructured pages — and most buyers have no fast way to sanity-check what they\'re reading.',
+      'Many used-car listings bury the details that actually matter to a buyer inside inconsistent, unstructured pages. Most buyers have no fast way to check and confirm what they are reading is actually what aligns with the vehicle.',
     built:
-      'VINSight scrapes and parses listings with Cheerio, then runs a two-stage Claude analysis: one pass extracts structured vehicle details, a second evaluates the listing like a buyer\'s advocate. The result is an interactive report, not a wall of text.',
+      'VINSight scrapes and parses listings with Cheerio, then runs a two-stage Claude analysis: one pass extracts structured vehicle details, a second evaluates the listing like a buyer\'s advocate. The result is an interactive report, to give the user a good synopsis of the car they are buying.',
     contribution:
       "I built the whole pipeline solo, including SSRF protection around the scraper and a rule-based fallback engine so the app still returns a usable report if scraping or the AI call fails.",
     repoUrl: 'https://github.com/Jland2306/VINSight',
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     problem:
       'A shoot-\'em-up needs menus and upgrade screens that keep pace with fast combat without ever pulling focus from it.',
     built:
-      'The full menu and button system for the game — start flow, upgrade selection, and the in-combat HUD.',
+      'The full menu and button system for the game which includes the start flow, upgrade selection, and the in-combat HUD.',
     contribution:
       "I designed and developed the UI on a team of four, then presented the build to a playtest group of 20 and iterated directly on what they got stuck on.",
     repoUrl: 'https://github.com/Jland2306/Stellar-Rampage',
@@ -106,11 +106,11 @@ export const projects: Project[] = [
     stack: ['Unity', 'C#'],
     hook: 'A horror survival game shipped in 3 days for Scream Jam 2025.',
     problem:
-      'A horror game jam entry has to teach its mechanics almost silently — stopping to explain something breaks the tension the whole genre depends on.',
+      'A horror game jam entry has to teach its mechanics almost silently, this is because stopping to explain something breaks the tension the whole genre depends on.',
     built:
       "The menu systems and the complete UI, shipped inside a 3-day jam deadline with a small team.",
     contribution:
-      "I owned the interface end to end, engineering flows that guide players through the core mechanics without a tutorial dumping text on screen.",
+      "I owned the interface from end to end. I engineered flows that guide players through the core mechanics without a tutorial dumping text on screen.",
     repoUrl: 'https://github.com/Jland2306/Tall-Boy-and-The-Lurking-Legend',
   },
   {
@@ -125,11 +125,11 @@ export const projects: Project[] = [
     stack: ['Maya', 'Substance Painter', 'Unity'],
     hook: 'A fully realized 3D garage environment, modeled, textured, and walkable in first person.',
     problem:
-      'Building a believable environment means owning the entire art pipeline, not just one stage of it — a model is only as good as the texture and lighting it ends up in.',
+      'Building a believable environment means owning the entire art pipeline, not just one stage of it. A model is only as good as the texture and lighting it ends up in.',
     built:
-      'Every asset in the garage, modeled from scratch in Maya, textured to a realistic finish in Substance Painter, and integrated into Unity as an explorable first-person walkthrough.',
+      'Every asset in the garage was modeled from scratch in Maya then textured to a realistic finish in Substance Painter to be finally integrated into Unity as an explorable first-person walkthrough.',
     contribution:
-      "I ran the complete art pipeline solo, from first block-out to the final in-engine walkthrough.",
+      "I ran the complete art pipeline solo, from the first model to the final in-engine walkthrough.",
     repoUrl: 'https://github.com/Jland2306/JDM-Garage',
   },
   {
@@ -144,13 +144,13 @@ export const projects: Project[] = [
     stack: ['Godot', 'Aseprite'],
     hook: 'A game jam entry that placed 9th overall out of the full Untitled Game Jam #116 field.',
     problem:
-      'A jam HUD has to communicate speed and damage at a glance, and it has to be built fast enough to leave time for the rest of the game.',
+      'Our HUD has to communicate speed and damage at a glance, and it has to be built fast enough to leave time for the rest of the game.',
     built:
       'Original sprites and HUD elements for a cohesive heads-up display, plus reusable 2D models and animations authored in Aseprite.',
     contribution:
       "I built the HUD and animation set for the team's entry, which placed 9th overall out of the jam field.",
     highlight: '9th place overall · Untitled Game Jam #116',
-    repoUrl: 'https://github.com/Jland2306/Drive-Until-Impact',
+    repoUrl: 'https://github.com/AwesomeAnthonyJr/DriveUntilImpact',
   },
   {
     slug: 'artic-dodge',
@@ -164,9 +164,9 @@ export const projects: Project[] = [
     stack: ['Pixi.js', 'JavaScript'],
     hook: 'A browser-based endless runner with a personal-best system built to drive replay.',
     problem:
-      'An endless runner only works if a player has a reason to run it again — that reason has to be built into the game state, not bolted on after.',
+      'An endless runner only works if a player has a reason to run it again, that reason has to be built into the game state, not after.',
     built:
-      'A full game-state system covering start, gameplay, and game-over, plus a personal-best score system designed specifically to drive replayability.',
+      'A full game-state system covering start, gameplay, and game-over, plus a score system designed specifically to drive replayability.',
     contribution:
       "I built it solo and ran structured playtesting that shaped the final difficulty and scoring design.",
     repoUrl: 'https://github.com/Jland2306/Artic-Dodge',
@@ -183,7 +183,7 @@ export const projects: Project[] = [
     stack: ['JavaScript', 'PokéAPI'],
     hook: 'Search and filter every Pokémon by name, type, and generation against the official API.',
     problem:
-      'The PokéAPI is comprehensive but raw — turning it into something a visitor can actually browse means real search, filtering, and a UI that holds up across screen sizes.',
+      'The PokéAPI is comprehensive but raw, turning it into something a visitor can actually browse means real search, filtering, and a UI that holds up across screen sizes.',
     built:
       'A search and filter interface against the official PokéAPI, with local storage persisting recent searches between visits.',
     contribution:
@@ -202,7 +202,7 @@ export const projects: Project[] = [
     stack: ['Godot', 'Aseprite'],
     hook: 'A 2D platformer with a hand-built character sprite sheet, animations, and actions.',
     problem:
-      'A platformer\'s feel comes from its animation as much as its code — the two have to be built together, not handed off between people.',
+      'A platformer\'s feel comes from its animation as much as its code, the two have to be built together, not separately.',
     built:
       'The character sprite sheet, its animations and actions, and the platforming systems in Godot, all built solo.',
     contribution:
