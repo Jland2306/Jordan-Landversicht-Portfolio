@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { asset } from '../lib/asset'
 
 interface DocumentMetaOptions {
   title: string
@@ -7,7 +8,7 @@ interface DocumentMetaOptions {
 }
 
 const SITE_NAME = 'Jordan Landversicht'
-const DEFAULT_IMAGE = '/images/og.png'
+const DEFAULT_IMAGE = asset('/images/og.png')
 
 function setMetaTag(attr: 'name' | 'property', key: string, content: string) {
   let el = document.head.querySelector<HTMLMetaElement>(`meta[${attr}="${key}"]`)

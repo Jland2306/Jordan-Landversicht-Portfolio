@@ -1,3 +1,5 @@
+import { asset } from '../lib/asset'
+
 export interface EducationEntry {
   school: string
   degree: string
@@ -34,7 +36,7 @@ export const profile: Profile = {
   linkedinUrl: 'https://linkedin.com/in/JordanLandversicht',
   github: 'github.com/Jland2306',
   githubUrl: 'https://github.com/Jland2306',
-  resumePath: '/Landversicht_Jordan_Resume.pdf',
+  resumePath: asset('/Landversicht_Jordan_Resume.pdf'),
   location: 'Rochester, NY',
   education: {
     school: 'Rochester Institute of Technology',

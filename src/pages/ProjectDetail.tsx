@@ -3,6 +3,7 @@ import { motion, useReducedMotion } from 'motion/react'
 import Seo from '../components/Seo'
 import Placeholder from '../components/Placeholder'
 import { getProjectBySlug } from '../data/projects'
+import { asset } from '../lib/asset'
 
 export default function ProjectDetail() {
   const { slug } = useParams()
@@ -14,7 +15,9 @@ export default function ProjectDetail() {
   }
 
   const galleryCount = project.galleryCount ?? 4
-  const gallery = Array.from({ length: galleryCount }, (_, i) => `/images/projects/${project.slug}-0${i + 1}.png`)
+  const gallery = Array.from({ length: galleryCount }, (_, i) =>
+    asset(`/images/projects/${project.slug}-0${i + 1}.png`),
+  )
 
   return (
     <motion.aside
@@ -43,7 +46,7 @@ export default function ProjectDetail() {
       </p>
 
       <Placeholder
-        src={`/images/projects/${project.slug}-cover.png`}
+        src={asset(`/images/projects/${project.slug}-cover.png`)}
         width={1280}
         height={720}
         alt={`Screenshot from ${project.title}`}

@@ -5,6 +5,7 @@ import Seo from '../components/Seo'
 import Placeholder from '../components/Placeholder'
 import FilterTabs from '../components/FilterTabs'
 import { projects, projectTags, type ProjectTag } from '../data/projects'
+import { asset } from '../lib/asset'
 
 const clipVariants = ['clip-torn-1', 'clip-torn-2', 'clip-torn-3']
 
@@ -48,7 +49,7 @@ export default function Projects() {
               >
                 <div className="skew-content">
                   <Placeholder
-                    src={`/images/projects/${project.slug}-cover.png`}
+                    src={asset(`/images/projects/${project.slug}-cover.png`)}
                     width={1280}
                     height={720}
                     alt={`Screenshot from ${project.title}`}

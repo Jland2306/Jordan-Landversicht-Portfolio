@@ -2,6 +2,7 @@ import Seo from '../components/Seo'
 import Placeholder from '../components/Placeholder'
 import DiagonalBand from '../components/DiagonalBand'
 import { profile } from '../data/profile'
+import { asset } from '../lib/asset'
 
 export default function About() {
   return (
@@ -18,7 +19,7 @@ export default function About() {
         <div className="skew-panel clip-torn-1 border-2 border-paper shadow-hard">
           <div className="skew-content">
             <Placeholder
-              src="/images/profile/headshot.png"
+              src={asset('/images/profile/headshot.png')}
               width={800}
               height={800}
               alt="Portrait of Jordan Landversicht"
