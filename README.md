@@ -1,11 +1,9 @@
-# Jordan Landversicht — Portfolio
+# Jordan Landversicht's - Portfolio
 
-A personal portfolio site for Jordan Landversicht, a Game Design &
+A personal portfolio site I made for myself, a Game Design &
 Development student at RIT looking for a Summer 2027 co-op or internship.
-The visual direction is a stylistic homage to the Persona 5 UI — hard
-black, one aggressive red, torn-paper panels on a slant, halftone texture,
-and a red diagonal wipe as the route-transition grammar. Every asset is
-original; no ripped sprites, fonts, or branding from the game.
+
+[Visit the site here ->](http://jland2306.github.io/Portfolio/)
 
 ## Stack
 
@@ -24,7 +22,7 @@ original; no ripped sprites, fonts, or branding from the game.
 
 ## About Me
 
-I'm a Game Design & Development student at RIT (GPA 3.6, Presidential Scholarship, Dean's List) who works comfortably across both game development and general software engineering. My projects range from engine-based games in Unity, Godot, and MonoGame to full-stack web apps built with Node.js and Angular. I enjoy building things end-to-end, from UI systems and gameplay mechanics to backend APIs and AI-powered tooling.
+I'm a Game Design & Development student at RIT thats works comfortably across both game development and general software engineering. My projects range from engine-based games in Unity, Godot, and MonoGame to full-stack web apps built with Node.js and Angular. I enjoy building things end-to-end, from UI systems and gameplay mechanics, to backend APIs and AI-powered tooling.
 
 I'm currently seeking a **Summer 2027 co-op or internship** where I can contribute to production software and keep growing as an engineer.
 
@@ -35,7 +33,7 @@ I'm currently seeking a **Summer 2027 co-op or internship** where I can contribu
 ### 🎮 Games & Interactive Media
 
 **[Fortunes Tower](https://github.com/dfs5974/Winter2026)** · Unity · *Jan 2025 – Present*
-Third-person RPG built with a three-person team, featuring exploration, quests, and player progression. I designed and implemented core UI systems — menus, inventory management, and quest tracking — as modular, scalable components.
+Third-person RPG built with a three-person team, featuring exploration, quests, and player progression. I designed and implemented core UI systems like the menus, inventory management, and quest tracking. Making sure each mechanic was modular, scalable components.
 
 **[Tall Boy and the Lurking Legend](https://github.com/Jland2306/Tall-Boy-and-The-Lurking-Legend)** · Unity · *Oct 2025*
 Horror survival game shipped for **Scream Jam 2025** under a strict 3-day deadline. Led the menu systems and complete UI, engineering intuitive flows that guide players through core mechanics.
@@ -58,7 +56,7 @@ Solo 2D platformer with a hand-built character sprite sheet, animations, and reu
 ### 🌐 Web & Full-Stack
 
 **[VINSight](https://github.com/Jland2306/VINSight)** · Node.js · Express · Claude API · *Jun 2026 – Aug 2026*
-Full-stack web app that scrapes and analyzes used-car listings and returns an interactive risk report. Combines structured-data extraction (Cheerio) with a two-stage Claude analysis — extraction plus a buyer's-advocate evaluation. Hardened with SSRF protection and a rule-based fallback engine so the app never fails when scraping or the AI call breaks.
+Full-stack web app that scrapes and analyzes used-car listings and returns an interactive risk report. Combines structured-data extraction (Cheerio) with a two-stage Claude analysis. This analysis consists of extraction plus a buyer's-advocate evaluation. Hardened with SSRF protection and a rule-based fallback engine so the app never fails when scraping or the AI call breaks.
 
 **[MiniMakers](https://github.com/Jland2306/MiniMakers)** · Angular · RESTful APIs · *Jan 2026 – May 2026*
 Full-stack e-commerce web app built with a team of 4. Developed the front-end architecture and integrated backend REST services, including secure user/admin privilege tiers and a cohesive multi-menu navigation experience.
@@ -104,12 +102,6 @@ Solo web app to search and filter Pokémon by name, type, and generation using t
 
 ---
 
-## About This Repository
-
-This repo hosts the source for my personal portfolio website. The live site will showcase the projects above with screenshots, playable/demo links, and write-ups.
-
-> _Tech stack for the site TBD — I'll update this section (and add the GitHub Pages link above) once the build is finished._
-
 ### Running Locally
 ```
 
@@ -120,9 +112,6 @@ npm run dev
 
 ## Editing content
 
-Every string a recruiter reads lives in `src/data/` — edit these, not the
-components:
-
 - `profile.ts` — name, tagline, education, bio, contact links, résumé path
 - `projects.ts` — one entry per project (dates, role, stack, tags,
   problem/built/contribution copy, optional highlight, optional repo URL)
@@ -131,7 +120,7 @@ components:
 - `experience.ts` — work history entries
 
 Adding a project is just adding an object to the `projects` array in
-`projects.ts` — the grid, filters, and detail panel all pick it up
+`projects.ts` - The grid, filters, and detail panel all pick it up
 automatically. See `public/images/README.md` for the image filenames it
 expects.
 
@@ -142,10 +131,6 @@ path it's referenced by (see `public/images/README.md` for the full list
 of expected filenames and dimensions). Until then, the `<Placeholder>`
 component renders an on-theme panel showing the filename and pixel size
 so it's obvious what's missing.
-
-The résumé download button expects a real PDF at
-`/public/Landversicht_Jordan_Resume.pdf` (currently an empty placeholder
-file).
 
 ## Building
 
@@ -159,7 +144,7 @@ npm run build:gh-pages     # build with the /Jordan-Landversicht-Portfolio/ base
 `npm run prerender` (or `npm run prerender:gh-pages`) crawls the freshly
 built `dist/` with a headless browser and writes each route's fully
 rendered HTML into its own `dist/<route>/index.html`, so the very first
-paint doesn't have to wait on JavaScript at all — the browser's own
+paint doesn't have to wait on JavaScript at all. The browser's own
 client bundle then takes over for navigation exactly as it would in a
 normal SPA. It also inlines the site's stylesheet into each page so
 first paint isn't blocked on a second network request either.
@@ -188,22 +173,6 @@ install chromium` if you haven't already.)
 Vercel's build containers can run Playwright, but need `npx playwright
 install --with-deps chromium` added to the build command) and output
 directory `dist`.
-
-## Quality
-
-Verified against the production build with axe-core and Lighthouse
-(desktop) across all seven routes:
-
-- **Accessibility: 100.** Zero WCAG 2A/2AA violations. Keyboard-navigable
-  nav (arrow keys + Enter), visible focus rings, real heading hierarchy,
-  alt text (including on placeholders), `prefers-reduced-motion` honored
-  throughout (wipes/slides become instant cuts or short crossfades).
-- **Best Practices: 100. SEO: 100.** Per-route `<title>`/meta
-  description/OG tags, `robots.txt`, no console errors.
-- **Performance: 80–85.** Cumulative Layout Shift is ~0 and the JS bundle
-  is lean, but First Contentful Paint sits around 1.7s under Lighthouse's
-  simulated throttling — the realistic floor for a purely client-rendered
-  SPA (nothing paints until the browser fetches and runs JS) even with
   static prerendering closing most of that gap. Going further would mean
   true SSR/streaming, which is out of scope for a static, backend-free
   build.
