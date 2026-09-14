@@ -13,8 +13,9 @@ import { chromium } from 'playwright'
 import { preview } from 'vite'
 import { mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
+import { resolveBase } from './deployBase.mjs'
 
-const base = process.env.DEPLOY_TARGET === 'gh-pages' ? '/Jordan-Landversicht-Portfolio/' : '/'
+const base = resolveBase()
 
 // Inline the (small, single) built stylesheet directly into each prerendered
 // page's <head>, replacing the <link>. That external stylesheet request is

@@ -151,7 +151,7 @@ file).
 
 ```bash
 npm run build              # plain build, served from /
-npm run build:gh-pages     # build with the /Jordan-Landversicht-Portfolio/ base path
+npm run build:gh-pages     # build with the /Portfolio/ base path
 ```
 
 ### Static prerendering
